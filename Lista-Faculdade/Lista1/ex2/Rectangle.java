@@ -4,14 +4,6 @@ public class Rectangle {
   private double width;
   private double height;
 
-  public double getWidth() {
-    return this.width;
-  }
-
-  public double getHeight() {
-    return this.height;
-  }
-
   public void setWidth(double width) {
     this.width = width;
   }
