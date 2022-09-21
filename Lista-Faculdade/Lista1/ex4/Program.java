@@ -8,17 +8,24 @@ public class Program {
          Locale.setDefault(Locale.US);
          Scanner sc = new Scanner(System.in);
 
-         Rectangle rect = new Rectangle();
+         
          System.out.println("Enter the number of shapes: ");
          int shapes = sc.nextInt();
-         for (int i = 0; i<shapes; i++) {
-          
+         double[] areas = new double[shapes];
+        // Rectangle rect = new Rectangle();
+        // double w = sc.nextDouble();
+        // double h = sc.nextDouble();
+        // rect.setWidth(w);
+        // rect.setHeight(h);
+        // double area = rect.area();
+        // System.out.println(area);
+        // areas [0] = rect.area();
+         ShapeProgram sh = new ShapeProgram();
+         for (int i = 0; i < areas.length; i++) {
+          sh.createShape();
+          String rc = sc.nextLine();
+          System.out.print(rc);
          }
-        //  System.out.println("Enter rectangle width and height:");
-        //  rect.setWidth(sc.nextDouble());
-        //  rect.setHeight(sc.nextDouble());
-
-         System.out.printf("AREA = %.2f%n", rect.area());
          sc.close();
   }
 }

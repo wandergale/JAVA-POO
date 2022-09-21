@@ -1,14 +1,15 @@
 package ex4;
 
-public class Rectangle extends Shape {
+public class Rectangle {
   private double width;
   private double height;
 
-  public void setWidth(double w) {
-    this.width = w;
+  public void setWidth(double width) {
+    this.width = width;
   }
-  public void setHeight(double h) {
-    this.height = h;
+
+  public void setHeight(double height) {
+    this.height = height;
   }
 
   public double area() {
