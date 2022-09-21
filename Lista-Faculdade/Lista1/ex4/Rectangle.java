@@ -1,6 +1,6 @@
 package ex4;
 
-public class Rectangle {
+public class Rectangle extends Shape{
   private double width;
   private double height;
 

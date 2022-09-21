@@ -1,7 +1,9 @@
 package ex4;
 
 abstract class Shape {
-  private Color color;
 
-  // abstract public double area();
+  public void setColor(String color) {
+    Color.valueOf(color);
+  }
+  abstract public double area();
 }

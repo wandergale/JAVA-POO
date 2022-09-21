@@ -2,6 +2,7 @@ package ex4;
 
 import java.util.Locale;
 import java.util.Scanner;
+import java.text.DecimalFormat; 
 
 public class Program {
   public static void main(String[] args) {
@@ -9,22 +10,43 @@ public class Program {
          Scanner sc = new Scanner(System.in);
 
          
-         System.out.println("Enter the number of shapes: ");
+         System.out.print("Enter the number of shapes: ");
          int shapes = sc.nextInt();
          double[] areas = new double[shapes];
-        // Rectangle rect = new Rectangle();
-        // double w = sc.nextDouble();
-        // double h = sc.nextDouble();
-        // rect.setWidth(w);
-        // rect.setHeight(h);
-        // double area = rect.area();
-        // System.out.println(area);
-        // areas [0] = rect.area();
-         ShapeProgram sh = new ShapeProgram();
-         for (int i = 0; i < areas.length; i++) {
-          sh.createShape();
+         for (int i = 1; i <= shapes; i++) {
+          System.out.println("**Shape #" + i + " data:**");
+          System.out.print("Rectangle or Circle (r/c)?");
+          sc.nextLine();
           String rc = sc.nextLine();
-          System.out.print(rc);
+          // System.out.println(rc.equals("r"));
+          if (rc.equals("r")) {
+            Rectangle rect = new Rectangle();
+            System.out.print("Color (BLACK/BLUE/RED): ");
+            String color = sc.nextLine();
+            rect.setColor(color);
+            System.out.println("Enter rectangle width and height:");
+            double w = sc.nextDouble();
+            double h = sc.nextDouble();
+            rect.setWidth(w);
+            rect.setHeight(h);
+            areas [i-1] = rect.area();
+          } else if (rc.equals("c")) {
+            Circle circle = new Circle();
+            System.out.print("Color (BLACK/BLUE/RED): ");
+            String color = sc.nextLine();
+            circle.setColor(color);
+            System.out.println("Enter circle radius:");
+            double radius = sc.nextDouble();
+            circle.setRadius(radius);            
+            areas[i-1] = circle.area();
+          }
+         }
+
+         DecimalFormat df = new DecimalFormat("#,###.00");
+         System.out.println("SHAPE AREAS: ");
+         System.out.println("");
+         for (double a : areas) {
+          System.out.println(df.format(a));
          }
          sc.close();
   }
