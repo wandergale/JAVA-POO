@@ -75,7 +75,7 @@ public class Program {
       System.out.println(productName+", $"+df.format(price)+", Quantity: "+ quantity+", Subtotal: $"+df.format(subtotal));
 
     }
-    System.out.println(df.format(order.totalPrice()));
+    System.out.println("Total: $"+df.format(order.totalPrice()));
 		
 		sc.close();
   }
