@@ -21,7 +21,7 @@ public class Program {
          double amount = sc.nextDouble();
          
          double result = CurrencyConverter.dollarToReal(amount, dollarPrice);
-         System.out.printf("Amount to be paid in reais = %.2f%n", result);
+         System.out.printf("Amount to be paid in reais = R$ %.2f%n", result);
          sc.close();
   }
 }
