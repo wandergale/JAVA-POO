@@ -1,43 +1,33 @@
 package application;
 
 import java.util.Locale;
-import java.util.Scanner;
 
-import util.Manager;
-import util.ProjectLider;
-import util.Developer;
+import entities.Funcionario;
+import entities.ICalculaSalario;
+import funcionarios.Dev;
+import funcionarios.Gerente;
+import funcionarios.LiderProjeto;
 
 public class Program {
-
+	
+	private final static double SALARIO_BASE = 1000.0;
+	
 	public static void main(String[] args) {
 		Locale.setDefault(Locale.US);
 		
-		Scanner sc = new Scanner(System.in);
 		
-		System.out.print("Enter user name: ");
-		String name = sc.nextLine();
-		
-		System.out.print("Enter user age: ");
-		int age = sc.nextInt();
-		
-		sc.nextLine();
-		System.out.print("Enter user role (m/p/d): ");
-		char role = sc.nextLine().charAt(0);
-		if (role == 'm') {
-			Manager manager = new Manager(name, age);
-			manager.pay();
-		}
-		else if (role == 'p') {
-			ProjectLider projectLider = new ProjectLider(name, age);
-			projectLider.pay();
-		}
-		else {
-			Developer developer = new Developer(name, age);
-			developer.pay();
-		}
+		Funcionario dev = new Dev("Wanderson", 20, SALARIO_BASE),
+					gerente = new Gerente("João", 40, SALARIO_BASE),
+					lider = new LiderProjeto("Ana", 25, SALARIO_BASE);
 	
-		
-		sc.close();
+		calculaSalario(dev);
+		calculaSalario(gerente);
+		calculaSalario(lider);
+	}
+	
+	
+	public static void calculaSalario(ICalculaSalario s) {
+		System.out.printf(s+"Salario final = $ %.2f%n", s.calculaSalario());
 	}
 
 }
