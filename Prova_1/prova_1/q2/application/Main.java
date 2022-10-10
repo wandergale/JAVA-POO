@@ -1,7 +1,5 @@
 package application;
 
-import java.util.Locale;
-
 import entities.Carro;
 import entities.Estacionamento;
 
