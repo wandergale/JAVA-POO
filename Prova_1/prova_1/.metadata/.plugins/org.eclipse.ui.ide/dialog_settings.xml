@@ -6,7 +6,13 @@
 		<item key="SmartImportRootWizardPage.STORE_NESTED_PROJECTS" value="true"/>
 		<item key="SmartImportRootWizardPage.STORE_CONFIGURE_NATURES" value="true"/>
 		<list key="org.eclipse.ui.internal.wizards.datatransfer.SmartImportRootWizardPage.knownSources">
+			<item value="C:\Users\wande\Documents\WorkSpace\JAVA-POO\Prova_1\prova_1\q2"/>
+			<item value="C:\Users\wande\Documents\WorkSpace\JAVA-POO\Prova_1\prova_1"/>
 			<item value="/home/wanderson/Documentos/JAVA-POO/Prova_1/prova_1"/>
 		</list>
+	</section>
+	<section name="ResourceNavigator">
+		<item key="ResourceViewer.STORE_SORT_TYPE" value="1"/>
+		<item key="ResourceWorkingSetFilter.STORE_WORKING_SET" value="Aggregate for window 1665400763382"/>
 	</section>
 </section>
