@@ -46,7 +46,7 @@ public class ContaCorrente {
 			System.out.println("Transferencia para "+conta.cliente.getNome() +" realizada com sucesso");
 			return true;
 		}
-		System.out.println("Ocorreu um erro na opereção");
+		System.out.println("Ocorreu um erro na operação");
 		return false;
 	}
 
