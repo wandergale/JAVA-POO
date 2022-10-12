@@ -19,7 +19,7 @@ public class Program {
 		
 		System.out.println();
 		
-		System.out.println("Tranferencia:");
+		System.out.println("Transferencia:");
 		cc.transferir(ce, 500);
 		System.out.println(cc);
 		System.out.println(ce);
