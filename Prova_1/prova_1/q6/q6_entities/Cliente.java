@@ -3,6 +3,10 @@ package q6_entities;
 public class Cliente {
 	private String nome;
 	
+	public Cliente() {
+		setNome(null);
+	}
+	
 	public Cliente(String nome) {
 		setNome(nome);
 	}

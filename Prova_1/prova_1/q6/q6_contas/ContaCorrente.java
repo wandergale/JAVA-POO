@@ -7,6 +7,11 @@ public class ContaCorrente {
 	protected float saldo;
 
 	
+	public ContaCorrente() {
+		this.cliente = new Cliente();
+		setSaldo(0);
+	}
+	
 	public ContaCorrente(Cliente cliente) {
 		setCliente(cliente);
 		setSaldo(0);

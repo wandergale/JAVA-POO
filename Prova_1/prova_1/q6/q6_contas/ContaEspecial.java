@@ -5,7 +5,11 @@ import q6_entities.Cliente;
 public class ContaEspecial extends ContaCorrente {
 	
 	private float limite;
-
+	
+	public ContaEspecial() {
+		super();
+	}
+	
 	public ContaEspecial(Cliente cliente, float limite) {
 		super(cliente);
 		setLimite(limite);
