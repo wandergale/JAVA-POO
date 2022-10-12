@@ -17,6 +17,7 @@ public class Pacotes extends Conexao {
 			if (this.recebendo == false) {				
 				this.enviando = true;
 				System.out.println("Enviando dados para "+this.getVisitante().getNomeDispositivo());
+				getVisitante().receberDados();
 			}
 			else {
 				System.out.println("Impossivel enviar enquanto estiver recebendo");
