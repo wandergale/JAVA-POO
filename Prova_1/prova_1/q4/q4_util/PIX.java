@@ -6,8 +6,7 @@ public class PIX extends Pagamento {
 
 	@Override
 	public void realizarPagamento(double valor) {
-		System.out.printf("Pagamento de $ %.2f", valor);
-		System.out.printf(" realizado via PIX.%n");
+		System.out.printf("Pagamento de $ %.2f realizdo via PIX", valor);
 	}
 
 	

@@ -6,8 +6,7 @@ public class Cartao extends Pagamento {
 
 	@Override
 	public void realizarPagamento(double valor) {
-		System.out.printf("Pagamento de $ %.2f", valor);
-		System.out.printf(" realizado via Cartão.%n");
+		System.out.printf("Pagamento de $ %.2f realizado via Cartão%n", valor);
 	}
 
 }

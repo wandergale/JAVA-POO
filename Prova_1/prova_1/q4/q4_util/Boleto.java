@@ -6,8 +6,7 @@ public class Boleto extends Pagamento {
 
 	@Override
 	public void realizarPagamento(double valor) {
-		System.out.printf("Pagamento de $ %.2f", valor);
-		System.out.printf(" realizado via Boleto.%n");
+		System.out.printf("Pagamento de $ %.2f realizado via Boleto%n", valor);
 	}
 
 	
