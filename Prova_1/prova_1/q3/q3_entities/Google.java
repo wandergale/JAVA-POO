@@ -1,9 +1,20 @@
 package q3_entities;
 
-public class Google extends Login {
+import q3_util.SingleSignOn;
 
-	public Google(String nome, String email, String senha) {
-		super(nome, email, senha);
+public class Google extends SingleSignOn {
+
+	public Google() {
+		super();
+	}
+	
+	public Google(String email, String senha) {
+		super(email, senha);
+	}
+
+	@Override
+	public void logar() {
+		System.out.println("Login realizado com Google");
 	}
 
 }
