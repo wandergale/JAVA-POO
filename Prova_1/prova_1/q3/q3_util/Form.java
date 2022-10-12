@@ -29,7 +29,7 @@ public class Form implements ILogin {
 
 	@Override
 	public void logar() {
-		System.out.println("Login realizado com formulário");
+		System.out.println("Login realizado com formulário.");
 	}
 	
 }
