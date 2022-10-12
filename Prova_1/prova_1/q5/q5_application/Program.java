@@ -19,6 +19,8 @@ public class Program {
 		System.out.println();
 		
 		user2.enviarDados();
+		
+		user1.desconectar();
 	}
 
 }

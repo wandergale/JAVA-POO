@@ -31,7 +31,8 @@ public abstract class Conexao implements IUFALBluetooth {
 	@Override
 	public abstract void enviarDados();
 
-	public void receberDados() {;
+	@Override
+	public void receberDados() {
 		if (!this.conectado) {
 			System.out.println("Conexão necessaria");
 			return;
@@ -39,6 +40,15 @@ public abstract class Conexao implements IUFALBluetooth {
 		this.recebendo = true;
 		System.out.println("Recebendo dados de "+this.visitante.getNomeDispositivo());
 		return;
+	}
+	
+	@Override
+	public void desconectar() {
+		this.conectado = false;
+		this.enviando = false;
+		this.recebendo = false;
+		getVisitante().setConectado(false);
+		setVisitante(null);
 	}
 	
 	public void setNomeDispositivo(String nomeDispositivo) {;
@@ -55,6 +65,10 @@ public abstract class Conexao implements IUFALBluetooth {
 	
 	public Conexao getVisitante() {
 		return this.visitante;
+	}
+	
+	public void setConectado(boolean conectado) {
+		this.conectado = conectado;
 	}
 
 }
