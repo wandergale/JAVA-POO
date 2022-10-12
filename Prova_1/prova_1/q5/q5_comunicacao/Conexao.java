@@ -44,10 +44,12 @@ public abstract class Conexao implements IUFALBluetooth {
 	
 	@Override
 	public void desconectar() {
+		if (this.conectado == false) return;
+		
 		this.conectado = false;
 		this.enviando = false;
 		this.recebendo = false;
-		getVisitante().setConectado(false);
+		getVisitante().desconectar();
 		setVisitante(null);
 	}
 	
