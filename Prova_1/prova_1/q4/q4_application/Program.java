@@ -15,7 +15,7 @@ public class Program {
 		Locale.setDefault(Locale.US);
 		Scanner sc = new Scanner(System.in);
 		
-		double valor = 5000;
+		double valor = 5000.0;
 		System.out.printf("Valor conta: $ %.2f%n", valor);
 		
 		Pagamento pagamento;
@@ -38,6 +38,7 @@ public class Program {
 				pagamento.realizarPagamento(valor);
 				break;
 			}
+			System.out.print("Digite uma forma de pagamento valida: ");
 		}
 				
 		sc.close();
