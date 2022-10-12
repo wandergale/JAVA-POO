@@ -7,21 +7,18 @@ import q5_entities.Serial;
 public class Program {
 
 	public static void main(String[] args) {
-		Conexao cx_pacotes = new Pacotes();
-		Conexao cx_serial = new Serial();
+		Conexao user1 = new Serial("S9");
+		Conexao user2 = new Serial("A52");
 		
-		System.out.println("Conexão por pacotes:");
-		cx_pacotes.conectar();
-		cx_pacotes.enviarDados();
-		cx_pacotes.receberDados();
+		user1.conectar(user2);
 		
 		System.out.println();
 		
-		System.out.println("Coneão Serial:");
-		cx_serial.conectar();
-		cx_serial.enviarDados();
-		cx_serial.receberDados();
-	
+		user1.enviarDados();
+		
+		System.out.println();
+		
+		user2.enviarDados();
 	}
 
 }

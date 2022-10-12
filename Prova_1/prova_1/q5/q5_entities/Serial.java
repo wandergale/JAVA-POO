@@ -3,27 +3,25 @@ package q5_entities;
 import q5_comunicacao.Conexao;
 
 public class Serial extends Conexao {
-
+	
+	public Serial() {
+		super();
+	}
+	
+	public Serial(String nomeDispositivo) {
+		super(nomeDispositivo);
+	}
+	
 	@Override
 	public void enviarDados() {
 		if (this.conectado) {
 			this.enviando = true;
-			System.out.println("Enviando dados");
+			System.out.println("Enviando dados para " + this.getVisitante().getNomeDispositivo());
+			getVisitante().receberDados();
+			return;
 		}
-		else {
-			System.out.println("Conexão necessaria");
-		}
-	}
-
-	@Override
-	public void receberDados() {
-		if (this.conectado) {
-			this.recebendo = true;
-			System.out.println("Recebendo dados");
-		}
-		else {
-			System.out.println("Conexão necessaria");
-		}
+		System.out.println("Conexão necessaria");
+		return;
 	}
 
 }
