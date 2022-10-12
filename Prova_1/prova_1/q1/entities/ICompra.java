@@ -1,6 +1,6 @@
 package entities;
 
-public interface Compra {
+public interface ICompra {
 	public abstract void getProducts();
 	public abstract double totalCompra();
 }

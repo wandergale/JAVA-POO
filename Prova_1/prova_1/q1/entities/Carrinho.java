@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 import produtos.Produto;
 
-public class Carrinho implements Compra {
+public class Carrinho implements ICompra {
 	
 	ArrayList<Produto> produtos;
 	private double valorTotal;
@@ -17,12 +17,6 @@ public class Carrinho implements Compra {
 	public void addProduto(Produto produto) {
 		produtos.add(produto);
 		valorTotal += produto.getPrice();
-	}
-	
-	public void products() {
-		for(Produto p : produtos) {
-			System.out.println(p);
-		}
 	}
 	
 	public void getProducts() {
