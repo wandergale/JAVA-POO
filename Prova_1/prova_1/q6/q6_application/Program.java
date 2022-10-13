@@ -8,27 +8,22 @@ public class Program {
 
 	public static void main(String[] args) {
 		Cliente cliente1 = new Cliente("Cristiano");
-		Cliente cliente2 = new Cliente("Ronaldo");
+		Cliente cliente2 = new Cliente("Ronaldo", 0, 1000);
 		
-		ContaCorrente cc = new ContaCorrente(cliente1);
-		ContaCorrente ce = new ContaEspecial(cliente2, 100, 1000);
-		
-		System.out.println(cc);
-		cc.depositar(2500);
-		System.out.println(cc);
-		
-		System.out.println();
-		
-		System.out.println("Transferencia:");
-		cc.transferir(ce, 500);
-		System.out.println(cc);
-		System.out.println(ce);
+		System.out.println(cliente1.getConta());
+		cliente1.getConta().depositar(1000);
+		System.out.println(cliente1.getConta());
+		cliente1.getConta().sacar(500);
+		System.out.println(cliente1.getConta());
 		
 		System.out.println();
 		
-		System.out.println("Conta Especial: ");
-		ce.sacar(1600);
-		System.out.println(ce);
+		System.out.println(cliente2.getConta());
+		cliente2.getConta().depositar(1000);
+		System.out.println(cliente2.getConta());
+		cliente2.getConta().sacar(2000);
+		System.out.println(cliente2.getConta());
+		
 	}
 
 }

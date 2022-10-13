@@ -29,7 +29,7 @@ public class ContaCorrente {
 	public void sacar(float valor) {
 		if (this.saldo >= valor) {
 			this.saldo -= valor;
-			System.out.printf("Saque de %.2f realizado com sucesso", valor);
+			System.out.printf("Saque de %.2f realizado com sucesso%n", valor);
 			return;
 		}
 		System.out.println("Saldo insuficiente");
