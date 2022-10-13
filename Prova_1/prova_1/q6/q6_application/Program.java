@@ -8,7 +8,7 @@ public class Program {
 
 	public static void main(String[] args) {
 		Cliente cliente1 = new Cliente("Cristiano");
-		Cliente cliente2 = new Cliente("Ronaldo", 0, 1000);
+		Cliente cliente2 = new Cliente("Antony", 0, 1000);
 		
 		System.out.println(cliente1.getConta());
 		cliente1.getConta().depositar(1000);
@@ -22,6 +22,19 @@ public class Program {
 		cliente2.getConta().depositar(1000);
 		System.out.println(cliente2.getConta());
 		cliente2.getConta().sacar(2000);
+		System.out.println(cliente2.getConta());
+		
+		System.out.println();
+		
+		System.out.println("Transferencias:");
+		cliente1.getConta().transferir(cliente2.getConta(), 500);
+		System.out.println(cliente1.getConta());
+		System.out.println(cliente2.getConta());
+		
+		System.out.println();
+		
+		cliente2.getConta().transferir(cliente1.getConta(), 500);
+		System.out.println(cliente1.getConta());
 		System.out.println(cliente2.getConta());
 		
 	}
