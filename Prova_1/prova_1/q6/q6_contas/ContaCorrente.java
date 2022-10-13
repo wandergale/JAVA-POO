@@ -53,6 +53,10 @@ public class ContaCorrente {
 	public void setCliente(Cliente cliente) {
 		this.cliente = cliente;
 	}
+	
+	public Cliente getCliente() {
+		return this.cliente;
+	}
 
 	public float getSaldo() {
 		return saldo;
