@@ -7,35 +7,35 @@ import q6_entities.Cliente;
 public class Program {
 
 	public static void main(String[] args) {
-		Cliente cliente1 = new Cliente("Cristiano");
-		Cliente cliente2 = new Cliente("Antony", 0, 1000);
+		ContaCorrente conta1 = new ContaCorrente(new Cliente("Cristiano"));
+		ContaCorrente conta2 = new ContaEspecial(new Cliente("Antony"), 0, 1000);
 		
-		System.out.println(cliente1.getConta());
-		cliente1.getConta().depositar(1000);
-		System.out.println(cliente1.getConta());
-		cliente1.getConta().sacar(500);
-		System.out.println(cliente1.getConta());
+		System.out.println(conta1);
+		conta1.depositar(1000);
+		System.out.println(conta1);
+		conta1.sacar(500);
+		System.out.println(conta1);
 		
 		System.out.println();
 		
-		System.out.println(cliente2.getConta());
-		cliente2.getConta().depositar(1000);
-		System.out.println(cliente2.getConta());
-		cliente2.getConta().sacar(2000);
-		System.out.println(cliente2.getConta());
+		System.out.println(conta2);
+		conta2.depositar(1000);
+		System.out.println(conta2);
+		conta2.sacar(2000);
+		System.out.println(conta2);
 		
 		System.out.println();
 		
 		System.out.println("Transferencias:");
-		cliente1.getConta().transferir(cliente2.getConta(), 500);
-		System.out.println(cliente1.getConta());
-		System.out.println(cliente2.getConta());
+		conta1.transferir(conta2, 500);
+		System.out.println(conta1);
+		System.out.println(conta2);
 		
 		System.out.println();
 		
-		cliente2.getConta().transferir(cliente1.getConta(), 500);
-		System.out.println(cliente1.getConta());
-		System.out.println(cliente2.getConta());
+		conta2.transferir(conta1, 500);
+		System.out.println(conta1);
+		System.out.println(conta2);
 		
 	}
 
