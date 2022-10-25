@@ -7,20 +7,17 @@ import q5_entities.Serial;
 public class Program {
 
 	public static void main(String[] args) {
-		Conexao user1 = new Serial("S9");
-		Conexao user2 = new Serial("A52");
-		
-		user1.conectar(user2);
-		
-		System.out.println();
-		
-		user1.enviarDados();
+		Conexao bluetoothSerial = new Serial();
+		bluetoothSerial.conectar();
+		bluetoothSerial.tratarDados();
+		bluetoothSerial.desconectar();
 		
 		System.out.println();
 		
-		user2.enviarDados();
-		
-		user1.desconectar();
+		Conexao bluetoothPacotes = new Pacotes();
+		bluetoothPacotes.conectar();
+		bluetoothPacotes.tratarDados();
+		bluetoothPacotes.desconectar();
 	}
 
 }
